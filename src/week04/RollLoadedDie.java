@@ -27,7 +27,7 @@ public class RollLoadedDie {
       // compute the roll with desired probabilities:
       // [1..5] => [1..5] (1/8)
       // [6,7,8]  =>  [6] (3/8)
-      int roll = (r<=5) ? r : 6;
+      int roll = (r<6) ? r : 6;
 
       // print the roll
       System.out.println(roll);
