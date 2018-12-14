@@ -27,33 +27,33 @@ public class CoolingByWindGravity {
                 v = Integer.parseInt(args[1]);
         try {
             week04.CoolingByWindGravity.calculateWindTemp(t, v);
-        } catch (WindTempException e) {
+        } catch (WindTempException ex) {
+            System.out.println(ex.getMessage());
         }
 
 
     }
 
     public static void calculateWindTemp(long t, long v) throws WindTempException {
-        try {
 
-            String errorMessage = "";
+        String errorMessage = "";
 
-            if (t < -50) errorMessage += "\n	⚠ Temperature " + t + "F looks like too low (less than -50F); ";
-            if (t > 50) errorMessage += "\n	⚠ Temperature " + t + "F looks like too high (more than 50F); ";
-            if (v < 3) errorMessage += "\n	⚠ Wind speed " + v + "MPH looks like too low (less than 3MPH); ";
-            if (v > 110) errorMessage += "\n	⚠ Wind speed " + v + "MPH looks like too high (more than 110MPH); ";
+        if (t < -50) errorMessage += "\n ⚠ Temperature " + t + "F looks like too low (less than -50F); ";
+        if (t > 50) errorMessage += "\n ⚠ Temperature " + t + "F looks like too high (more than 50F); ";
+        if (v < 3) errorMessage += "\n  ⚠ Wind speed " + v + "MPH looks like too low (less than 3MPH); ";
+        if (v > 110) errorMessage += "\n ⚠ Wind speed " + v + "MPH looks like too high (more than 110MPH); ";
 
-            if (errorMessage.length() > 1) throw new WindTempException(t, v, errorMessage);
+        if (errorMessage.length() > 1) throw new WindTempException(t, v, errorMessage);
 
-            double w = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * Math.pow(v, 0.16);
+        double w = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * Math.pow(v, 0.16);
 
-            System.out.println("\n=====================================================================");
-            System.out.println("For temperature "+t+"F and wind speed "+v+"MPH the wind chill is "+w);
-            System.out.println("Reference: https://www.weather.gov/safety/cold-wind-chill-chart");
-            System.out.println("=====================================================================\n");
+        String result = "\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯"+
+                        "\n For temperature "+t+"F and wind speed "+v+"MPH the wind chill is "+w+
+                        "\n Reference: https://www.weather.gov/safety/cold-wind-chill-chart"+
+                        "\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n";
 
-        } catch (WindTempException ex) {
-        }
+        System.out.println(result);
+
     }
 
 }
