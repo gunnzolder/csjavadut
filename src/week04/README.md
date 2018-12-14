@@ -19,8 +19,8 @@
    - PowersOfTwo (ступені двійки)
    - FiniteSum (сума ряду)
    - CoolingByWindGravity (#1.3.6)*
-   -  ImproovedTenOfHellos (#1.3.8)*
+   - ImproovedTenOfHellos (#1.3.8)*
    - NormalDistribution (#1.3.10)*
-   -  ImpovedInterestCapitalization (#1.3.17)*
+   - ImpovedInterestCapitalization (#1.3.17)*
    
    *(умови в підручнику)

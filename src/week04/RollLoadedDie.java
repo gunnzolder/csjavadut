@@ -1,11 +1,11 @@
 package week04;
 /*************************************************************************
- * Name:
- * NetID:
- * Precept:
+ * Name: Anton Parkhomenko
+ * NetID: parkhomenko.av
+ * Precept: week 04
  *
  * 
- * Îïèñàíèå: íà ðóññêîì â ó÷åáíèêå, ñòð.99 ¹1.3.5
+ * ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ: Ð½Ð° Ñ€ÑƒÑÑÐºÐ¾Ð¼ Ð² ÑƒÑ‡ÐµÐ±Ð½Ð¸ÐºÐµ, ÑÑ‚Ñ€.99 â„–1.3.5
  * 
  * Description: Simulate the roll of a loaded six-sided die, where
  * the values 1, 2, 3, 4, and 5 appear with probability 1/8 and the
@@ -20,21 +20,17 @@ package week04;
 
 public class RollLoadedDie {
    public static void main(String[] args) {
-      // generate random double in the range [0.0, 1.0)
-//      ________ r = __________________________________________;
-//
-//      // compute the roll with desired probabilities
-//      int roll;
-//      if      (______________________________) roll = _______;
-//      else if (
-//      else if (
-//      else if (
-//      else if (
-//      else
+
+      // generate a random number in the range [1;8]
+      int r = (int)(Math.random()*8)+1;
+
+      // compute the roll with desired probabilities:
+      // [1..5] => [1..5] (1/8)
+      // [6,7,8]  =>  [6] (3/8)
+      int roll = (r<=5) ? r : 6;
 
       // print the roll
-
-
+      System.out.println(roll);
    }
 }
 

@@ -1,8 +1,8 @@
 package week04;
-/******************************************************************************
- * Name:
- * NetID:
- * Precept:
+/*************************************************************************
+ * Name: Anton Parkhomenko
+ * NetID: parkhomenko.av
+ * Precept: week 04
  *
  * Description: This program takes a command-line argument n and prints a
  * table of the powers of 2 that are less than or equal to 2^n.
