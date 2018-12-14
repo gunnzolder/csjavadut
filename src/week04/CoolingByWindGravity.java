@@ -21,35 +21,36 @@ package week04;
  *************************************************************************/
 
 public class CoolingByWindGravity {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		long 	t = Integer.parseInt(args[0]),
-				v = Integer.parseInt(args[1]);
-		try {
-			week04.CoolingByWindGravity.calculateWindTemp(t,v);
-		} catch (WindTempException e) {}
+        long t = Integer.parseInt(args[0]),
+                v = Integer.parseInt(args[1]);
+        try {
+            week04.CoolingByWindGravity.calculateWindTemp(t, v);
+        } catch (WindTempException e) {
+        }
 
 
+    }
 
-	}
+    public static void calculateWindTemp(long t, long v) throws WindTempException {
+        try {
 
-	public static void calculateWindTemp(long t, long v) throws WindTempException {
-		try {
+            String errorMessage = "";
 
-			String errorMessage = "";
+            if (t < -50) errorMessage += "\n	- Temperature " + t + " looks like too low (less than -50F); ";
+            if (t > 50) errorMessage += "\n	- Temperature " + t + " looks like too high (more than 50F); ";
+            if (v < 3) errorMessage += "\n	- Wind speed " + v + " looks like too low (less than 3MPH); ";
+            if (v > 110) errorMessage += "\n	- Wind speed " + v + " looks like too high (more than 110MPH); ";
 
-			if (t<-50) errorMessage +=	"\n	- Temperature "+t+" looks like too low (less than -50F); ";
-			if (t>50) errorMessage +=	"\n	- Temperature "+t+" looks like too high (more than 50F); ";
-			if (v<3) errorMessage +=	"\n	- Wind speed "+v+" looks like too low (less than 3MPH); ";
-			if (v>110) errorMessage +=	"\n	- Wind speed "+v+" looks like too high (more than 110MPH); ";
+            if (errorMessage.length() > 1) throw new WindTempException(t, v, errorMessage);
 
-			if(errorMessage.length()>1) throw new WindTempException(t,v,errorMessage);
+            double w = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * Math.pow(v, 0.16);
 
-			double w = 35.74 + 0.6215*t + (0.4275*t - 35.75)  * Math.pow(v, 0.16);
+            System.out.println(w);
 
-			System.out.println(w);
-
-		} catch (WindTempException ex) {}
-	}
+        } catch (WindTempException ex) {
+        }
+    }
 
 }
