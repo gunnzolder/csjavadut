@@ -1,4 +1,5 @@
 package week02;
+
 /***********************************************************************
  * Name: Anton Parkhomenko
  * NetID: parkhomenko.av
@@ -26,8 +27,8 @@ package week02;
 public class Eggsactly {
     public static void main(String[] args) {
 
-        int n = Integer.parseInt(args[0]), m = n/12;
-        System.out.println(m + " " + n%12);
+        int n = Integer.parseInt(args[0]), m = n / 12;
+        System.out.println(m + " " + n % 12);
 
     }
 }

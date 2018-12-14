@@ -26,17 +26,17 @@ public class PowersOfTwo {
     public static void main(String[] args) {
 
         // reads the command-line argument
-        int n = __________________
-
-        int i = 0;                // count from 0 to n
-        int powerOfTwo = 1;       // the ith power of 2
+//        int n = 0;
+//
+//        int i = 0;                // count from 0 to n
+//        int powerOfTwo = 1;       // the ith power of 2
 
         // repeat until i equals n
-        while (________) {
-            System.out.println(___________);   // print the power of 2
+//        while (________) {
+//            System.out.println(___________);   // print the power of 2
             // some code
             // some code
-        }
+//        }
     }
 }
 
