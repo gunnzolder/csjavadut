@@ -1,3 +1,4 @@
+package week02;
 /***********************************************************************
  * Name: Anton Parkhomenko
  * NetID: parkhomenko.av

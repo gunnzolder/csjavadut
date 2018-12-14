@@ -1,3 +1,4 @@
+package week01;
 /***********************************************************************
  * Name: Anton Parkhomenko
  * NetID: parkhomenko.av
@@ -24,8 +25,6 @@
  * > java NextYear FatherTime 999
  * В наступному році FatherTime буде 1000 років.
  ***********************************************************************/
-
-package week01;
 
 public class NextYear {
     public static void main(String[] args) {
