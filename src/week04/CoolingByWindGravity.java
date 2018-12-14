@@ -11,7 +11,7 @@ package week04;
  *
  *      w = 35.74 + 0.6215*t + (0.4275*t - 35.75)  *  v ^ 0.16
  *
- * Reference:  http://www.nws.noaa.gov/om/windchill/index.shtml
+ * Reference:  https://www.weather.gov/safety/cold-wind-chill-chart
  *
  * The wind chill formula is only valid if the wind speed
  * is above 3MPH and below 110MPH and the temperature is below 50 degrees
@@ -38,16 +38,19 @@ public class CoolingByWindGravity {
 
             String errorMessage = "";
 
-            if (t < -50) errorMessage += "\n	- Temperature " + t + " looks like too low (less than -50F); ";
-            if (t > 50) errorMessage += "\n	- Temperature " + t + " looks like too high (more than 50F); ";
-            if (v < 3) errorMessage += "\n	- Wind speed " + v + " looks like too low (less than 3MPH); ";
-            if (v > 110) errorMessage += "\n	- Wind speed " + v + " looks like too high (more than 110MPH); ";
+            if (t < -50) errorMessage += "\n	⚠ Temperature " + t + "F looks like too low (less than -50F); ";
+            if (t > 50) errorMessage += "\n	⚠ Temperature " + t + "F looks like too high (more than 50F); ";
+            if (v < 3) errorMessage += "\n	⚠ Wind speed " + v + "MPH looks like too low (less than 3MPH); ";
+            if (v > 110) errorMessage += "\n	⚠ Wind speed " + v + "MPH looks like too high (more than 110MPH); ";
 
             if (errorMessage.length() > 1) throw new WindTempException(t, v, errorMessage);
 
             double w = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * Math.pow(v, 0.16);
 
-            System.out.println(w);
+            System.out.println("\n=====================================================================");
+            System.out.println("For temperature "+t+"F and wind speed "+v+"MPH the wind chill is "+w);
+            System.out.println("Reference: https://www.weather.gov/safety/cold-wind-chill-chart");
+            System.out.println("=====================================================================\n");
 
         } catch (WindTempException ex) {
         }
