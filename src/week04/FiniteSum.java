@@ -1,3 +1,4 @@
+package week04;
 /******************************************************************************
  * Name:
  * NetID:
@@ -22,7 +23,7 @@ public class FiniteSum {
     public static void main(String[] args) {
         
         // read first command-line argument
-        int n = ________________;
+        int n = 0;
             
         // this variable is your running sum
         int sum = 0;
