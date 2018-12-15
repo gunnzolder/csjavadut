@@ -27,7 +27,10 @@ package week04;
 
 public class RollDie {
    public static void main(String[] args) {
-
+      // вывод результата
+      System.out.println(roll());
+   }
+   public static int roll() {
       // указанные переменные должны обязательно применяться в коде
       // подумайте, какой тип данных должен быть установлен
 
@@ -35,9 +38,6 @@ public class RollDie {
       int SIDES = 6;
 
       // roll should be 1 through SIDES
-      int roll = (int) (Math.random() * SIDES) + 1;
-
-      // вывод результата
-      System.out.println(roll);
+      return (int) (Math.random() * SIDES) + 1;
    }
 }
