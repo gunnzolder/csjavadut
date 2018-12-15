@@ -23,15 +23,17 @@ public class FiniteSum {
     public static void main(String[] args) {
         
         // read first command-line argument
-        int n = 0;
+        int n = Integer.parseInt(args[0]);
             
         // this variable is your running sum
         int sum = 0;
         
         // write a for-loop to calculate 'sum'
-        
+        for (int i = 1; i <= n; i++) sum += i;
+
         // print 'sum'
-        
+        System.out.println(sum);
+
     }
 }
 

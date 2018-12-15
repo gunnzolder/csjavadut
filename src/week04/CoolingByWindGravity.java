@@ -30,8 +30,6 @@ public class CoolingByWindGravity {
         } catch (WindTempException ex) {
             System.out.println(ex.getMessage());
         }
-
-
     }
 
     public static void calculateWindTemp(long t, long v) throws WindTempException {
